@@ -7,7 +7,7 @@ def menu(): #Creacion del menu principal
             3. Ninguna de las anteriores.
             Ingrese la opción aquí    """))
         if (n==1):
-            menu_ensayos() #llama al subprograma que tiene las opciones de ensayos
+            menu_ensayos() #llama al subprograma que tiene las opciones de ensayos.
         elif (n==2):
             a=int(input("Que informe desea hacer"))
         elif(n==3):
