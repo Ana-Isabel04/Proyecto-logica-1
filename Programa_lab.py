@@ -85,5 +85,7 @@ def hematologia():
                    3. Clostridium.
                    4. Test de Hansen
                    Ingrese la opción aquí """ ))
+def menu_informes():
+    print("aun no esta hecho pero no quiero que quede por error")
 #main 
 menu() #llamamos al menú principal
