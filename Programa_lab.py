@@ -9,7 +9,7 @@ def menu(): #Creacion del menu principal
         if (n==1):
             menu_ensayos() #llama al subprograma que tiene las opciones de ensayos.
         elif (n==2):
-            a=int(input("Que informe desea hacer"))
+            menu_informes()
         elif(n==3):
             print("Muchas gracias por usar nuestros servicios, vuelva prontro")
             break 
@@ -26,17 +26,29 @@ def menu_ensayos():
                         Ingrese la opción aquí """))
     match n: 
         case 1: 
-            examen=int(input("""Desea realizar
+            orinas()
+        case 2: 
+            coagulacion()
+        case 3:
+            quimica_sanguinea()
+        case 4:
+            inmunologia()
+        case 5: 
+            microbiologia()
+        case 6:
+            hematologia()
+def orinas():
+    examen=int(input("""Desea realizar
                    1. Citoquimico de orina. 
                    2. Proteinas de Bence Jones.
                    Ingrese la opción aquí """ ))
-        case 2: 
-            examen=int(input("""Desea realizar
+def coagulacion():
+    examen=int(input("""Desea realizar
                    1. TPT.
                    2. Dímero D.
                    Ingrese la opción aquí """ ))
-        case 3:
-            examen=int(input("""Desea realizar
+def quimica_sanguinea():
+    examen=int(input("""Desea realizar
                    1. Glucosa. 
                    2. Colesterol total.
                    3. Colesterol HDL.
@@ -44,8 +56,8 @@ def menu_ensayos():
                    5. Hierro. 
                    6. Fosfatasa alcalina.
                    Ingrese la opción aquí """ ))
-        case 4:
-            examen=int(input("""Desea realizar
+def inmunologia():
+    examen=int(input("""Desea realizar
                    1. TSH.
                    2. T4L.
                    3. Ferritina.
@@ -61,18 +73,17 @@ def menu_ensayos():
                    13. Morfina. 
                    14. Dengue. 
                    Ingrese la opción aquí """ ))
-        case 5: 
-            examen=int(input("""Desea realizar
+def microbiologia():
+    examen=int(input("""Desea realizar
                    1. H1N1.
                    2. Virus Sincitial.
                    Ingrese la opción aquí """ ))
-        case 6:
-            examen=int(input("""Desea realizar
+def hematologia():
+    examen=int(input("""Desea realizar
                    1. Cuadro Hemático.
                    2. Leishmania.
                    3. Clostridium.
                    4. Test de Hansen
                    Ingrese la opción aquí """ ))
-
 #main 
 menu() #llamamos al menú principal
