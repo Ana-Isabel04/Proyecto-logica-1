@@ -1,4 +1,7 @@
-def menu(): #Creacion del menu principal 
+#FUNCIONES
+
+#FUNCION DEL MENU PRINCIPAL 
+def menu(): 
     print("Bienvenido al programa de control de requisitos del laboratorio clinico")
     while(True): #Hace que se repita el menú hasta que demos la opción de salir del programa.
         n=int(input("""Ingrese la opción que desea realizar el día de hoy: 
@@ -15,6 +18,8 @@ def menu(): #Creacion del menu principal
             break 
         else:
             print("Ha seleccionado una opción que no existe en el menú. Intente de nuevo.")
+
+#FUNCION DEL SUBMENU DE ENSAYOS
 def menu_ensayos():
     n=int(input("""En que sección del laboratorio desea realizar los ensayos
                         1. Orinas. 
@@ -37,6 +42,8 @@ def menu_ensayos():
             microbiologia()
         case 6:
             hematologia()
+
+#OPCIONES DEL SUBMENU DE ENSAYOS
 def orinas():
     examen=int(input("""Desea realizar
                    1. Citoquimico de orina. 
@@ -85,7 +92,10 @@ def hematologia():
                    3. Clostridium.
                    4. Test de Hansen
                    Ingrese la opción aquí """ ))
+    
+#SUBMENU DE INFORMES
 def menu_informes():
     print("aun no esta hecho pero no quiero que quede por error")
-#main 
+
+#MAIN
 menu() #llamamos al menú principal
