@@ -3,6 +3,7 @@
 datos_control_interno=[]
 datos_control_externo=[]
 #matrices
+
 #funcion para los datos de control interno 
 def control_interno():
     analito_int=int(input("""Ingrese la opción de analito que desea ingresar información:
