@@ -86,8 +86,8 @@ matriz_cv = [
     ["Lactato", [4.30, 6.45, 2.15]],
     ["Lactato-deshidrogenasa", [1.80, 2.70, 0.90]]
 ]
-matriz_bias=[
-    ["Amilasa", [7.40 11.10, 3.70]],
+matriz_bias = [
+    ["Amilasa", [7.40, 11.10, 3.70]],
     ["Amilasa (en orina)", [26.16, 39.24, 13.08]],
     ["Adenosin deaminasa", [7.01, 10.52, 3.51]],
     ["Alanina-aminotransferasa", [11.48, 17.21, 5.74]],
@@ -128,6 +128,49 @@ matriz_bias=[
     ["Lactato-deshidrogenasa", [4.26, 6.39, 2.13]],
     ["Magnesio", [1.84, 2.75, 0.92]]
 ]
+matriz_otras_esp= [
+    ["Amilasa", [0.00, 10.00, 8.90, 10.00, 29.73, 14.86]],
+    ["Amilasa (en orina)", [0.00, 0.00, 8.50, 0.00, 50.00, 25.00]],
+    ["Adenosin deaminasa", [0.00, 0.00, 0.00, 0.00, 0.00, 0.00]],
+    ["Alanina-aminotransferasa", [11.50, 15.00, 11.50, 12.00, 33.05, 16.53]],
+    ["Albúmina", [12.50, 8.00, 5.50, 6.00, 10.00, 5.00]],
+    ["Albúmina (en orina)", [15.00, 0.00, 10.10, 10.00, 50.00, 25.00]],
+    ["Fosfatasa alcalina", [11.00, 20.00, 12.70, 12.00, 21.60, 10.80]],
+    ["Amonio", [0.00, 0.00, 0.00, 10.00, 25.95, 12.97]],
+    ["Antiestreptolisina O", [0.00, 0.00, 11.10, 0.00, 50.00, 25.00]],
+    ["Aspartato-aminotransferasa", [11.50, 15.00, 9.30, 12.00, 50.00, 25.00]],
+    ["Bilirrubina total", [22.00, 20.00, 10.10, 12.00, 30.00, 15.00]],
+    ["Bilirrubina conjugada", [0.00, 0.00, 13.50, 20.00, 50.00, 25.00]],
+    ["Complemento C3", [0.00, 15.00, 7.50, 0.00, 16.67, 8.33]],
+    ["Complemento C4", [0.00, 20.00, 8.70, 0.00, 25.00, 12.50]],
+    ["Calcio", [6.00, 0.00, 4.50, 4.00, 4.45, 2.23]],
+    ["Calcio (en orina)", [8.50, 0.00, 5.40, 0.00, 26.07, 13.04]],
+    ["Calcio ionizado", [7.50, 0.00, 8.70, 0.00, 4.10, 2.05]],
+    ["Calcio ionizado (B221-2)", [7.50, 0.00, 8.70, 0.00, 4.10, 2.05]],
+    ["Calcio ionizado (B221-3)", [4.50, 5.00, 3.30, 3.00, 2.40, 1.20]],
+    ["Cloruro", [4.50, 5.00, 2.80, 3.00, 2.20, 1.10]],
+    ["Cloruro (Cobas B221)", [4.50, 5.00, 2.80, 3.00, 2.20, 1.10]],
+    ["Cloruro (Cobas B221-2)", [0.00, 0.00, 4.10, 10.00, 28.50, 14.25]],
+    ["Cloruro (en orina)", [7.00, 10.00, 5.20, 6.00, 50.00, 25.00]],
+    ["Colesterol", [13.50, 30.00, 8.00, 0.00, 50.00, 25.00]],
+    ["Proteína C reactiva", [11.00, 20.00, 8.10, 12.00, 50.00, 25.00]],
+    ["Creatina Kinasa", [0.00, 25.00, 20.90, 20.00, 50.00, 25.00]],
+    ["Creatina Kinasa MB, actividad", [11.50, 10.00, 7.90, 8.00, 18.75, 9.38]],
+    ["Creatinina", [12.00, 0.00, 6.90, 10.00, 40.24, 20.12]],
+    ["Creatinina (en orina)", [11.50, 15.00, 11.90, 12.00, 50.00, 25.00]],
+    ["g-Glutamiltransferosa", [11.00, 8.00, 5.20, 8.00, 13.86, 6.93]],
+    ["Glucosa", [11.00, 0.00, 5.30, 10.00, 50.00, 25.00]],
+    ["Glucosa (en orina)", [10.00, 10.00, 6.80, 5.00, 10.00, 5.00]],
+    ["Hemoglobina glicada", [0.00, 20.00, 11.90, 12.00, 10.00, 5.00]],
+    ["Colesterol HDL", [12.00, 15.00, 7.50, 0.00, 39.74, 19.87]],
+    ["Inmunoglobina A", [10.00, 20.00, 6.80, 0.00, 21.11, 10.56]],
+    ["Inmunoglobina G", [13.00, 20.00, 7.40, 0.00, 35.71, 17.86]],
+    ["Inmunoglobina M", [0.00, 20.00, 6.80, 12.00, 27.78, 13.89]],
+    ["Hierro", [11.00, 0.00, 7.30, 12.00, 31.48, 15.74]],
+    ["Lactato", [9.00, 15.00, 7.50, 8.00, 17.21, 8.61]],
+    ["Lactato-deshidrogenasa", [7.50, 15.00, 6.10, 8.00, 17.50, 8.75]],
+]
+
 #funcion para los datos de control interno 
 def control_interno():
     analito_int=int(input("""Ingrese la opción de analito que desea ingresar información:
