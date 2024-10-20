@@ -1,104 +1,154 @@
 #Funciones-----------------------------------------------------------------------------------------♥
-
-#F2-SubMenu_Ensayos
-def menu_ensayos():
-    n=int(input("""En que sección del laboratorio desea realizar los ensayos
-            ➜ 1. Orinas. 
-            ➜ 2. Coagulación. 
-            ➜ 3. Química Sanguinea.
-            ➜ 4. Inmunologia. 
-            ➜ 5. Microbiología. 
-            ➜ 6. Hematologia.\nIngrese la opción aquí: """))
-    print("………………………………………………………………………………………………………………………………………………………………………………………………………………♥")
-    match n: 
-        case 1: 
-            orinas()
-        case 2: 
-            coagulacion()
-        case 3:
-            quimica_sanguinea()
-        case 4:
-            inmunologia()
-        case 5: 
-            microbiologia()
-        case 6:
-            hematologia()
-
-#OPCIONES DEL SUBMENU DE ENSAYOS
-def orinas():
-    examen=int(input("""Desea realizar
-            ➜ 1. Citoquimico de orina. 
-            ➜ 2. Proteinas de Bence Jones.\nIngrese la opción aquí: """))
-    print("………………………………………………………………………………………………………………………………………………………………………………………………………………♥")
-def coagulacion():
-    examen=int(input("""Desea realizar
-            ➜ 1. TPT.
-            ➜ 2. Dímero D.\nIngrese la opción aquí: """))
-    print("………………………………………………………………………………………………………………………………………………………………………………………………………………♥")
-def quimica_sanguinea():
-    examen=int(input("""Desea realizar
-            ➜ 1. Glucosa. 
-            ➜ 2. Colesterol total.
-            ➜ 3. Colesterol HDL.
-            ➜ 4. Triglicéridos. 
-            ➜ 5. Hierro. 
-            ➜ 6. Fosfatasa alcalina.\nIngrese la opción aquí: """))
-    print("………………………………………………………………………………………………………………………………………………………………………………………………………………♥")
-def inmunologia():
-    examen=int(input("""Desea realizar
-            ➜ 1. TSH.
-            ➜ 2. T4L.
-            ➜ 3. Ferritina.
-            ➜ 4. Vitamina B12.
-            ➜ 5. T3.
-            ➜ 6. Hemoclasificación.
-            ➜ 7. VDRL.
-            ➜ 8. FTA.
-            ➜ 9. PIE.
-            ➜ 10. Cocaina. 
-            ➜ 11. Marihuana.
-            ➜ 12. Benzodiazepinas.
-            ➜ 13. Morfina. 
-            ➜ 14. Dengue.\nIngrese la opción aquí: """))
-    print("………………………………………………………………………………………………………………………………………………………………………………………………………………♥")
-def microbiologia():
-    examen=int(input("""Desea realizar
-            ➜ 1. H1N1.
-            ➜ 2. Virus Sincitial.\nIngrese la opción aquí: """))
-    print("………………………………………………………………………………………………………………………………………………………………………………………………………………♥")
-def hematologia():
-    examen=int(input("""Desea realizar
-            ➜ 1. Cuadro Hemático.
-            ➜ 2. Leishmania.
-            ➜ 3. Clostridium.
-            ➜ 4. Test de Hansen.\nIngrese la opción aquí: """))
-    print("………………………………………………………………………………………………………………………………………………………………………………………………………………♥")
+#lista para almacenar datos 
+datos_control_interno=[]
+datos_control_externo=[]
+#funcion para los datos de control interno 
+def control_interno():
+    analito_int=int(input("""Ingrese la opción de analito que desea ingresar información:
+        1. Amilasa.
+        2. Amilasa (en ornia)
+        3. Adenosin deaminasa. 
+        4. Alanina-aminotransferasa. 
+        5. Albúmina. 
+        6. Albúmina (en orina).
+        7. Fosfatasa alcalina. 
+        8. Amonio. 
+        9. Antiestreptolisina O. 
+        10. Aspartato-aminotransferasa. 
+        11. Bilirrubina total. 
+        12. Bilirrubina conjugada. 
+        13. Complemento C3. 
+        14. Complemento C4. 
+        15. Calcio. 
+        16. Calcio (en orina).
+        17. Calcio ionizado. 
+        18. Calcio ionizado (B221-2).
+        19. Cloruro. 
+        20. Cloruro (Cobas B221).
+        21. Cloruro (Cobas B221-2).
+        22. Cloruro (en orina).
+        23. Colesterol. 
+        24. Proteína C reactiva. 
+        25. Creatina Kinasa. 
+        26. Creatina Kinasa MB, actividad. 
+        27. Creatinina. 
+        28. Creatinina (en orina).
+        29. g-Glutamiltransferosa. 
+        30. Glucosa. 
+        31. Glucosa (en orina).    
+        32. Hemoglobina glicada. 
+        33. Colesterol HDL. 
+        34. Inmunoglobina A. 
+        35. Inmunoglobina G. 
+        36. Inmunoglobina M. 
+        37. Hierro. 
+        38. Lactato. 
+        39. Lactato-deshidrogenasa. 
+        40. Magnesio.  
+        Ingrese la opción aqui:  """))
+    return analito_int
+#funcion para elegir los datos externos.
+def control_externo():
+    analito_ext=int(input("""Ingrese la opción de analito que desea ingresar información:
+        1. Amilasa.
+        2. Amilasa (en ornia)
+        3. Adenosin deaminasa. 
+        4. Alanina-aminotransferasa. 
+        5. Albúmina. 
+        6. Albúmina (en orina).
+        7. Fosfatasa alcalina. 
+        8. Amonio. 
+        9. Antiestreptolisina O. 
+        10. Aspartato-aminotransferasa. 
+        11. Bilirrubina total. 
+        12. Bilirrubina conjugada. 
+        13. Complemento C3. 
+        14. Complemento C4. 
+        15. Calcio. 
+        16. Calcio (en orina).
+        17. Calcio ionizado. 
+        18. Calcio ionizado (B221-2).
+        19. Cloruro. 
+        20. Cloruro (Cobas B221).
+        21. Cloruro (Cobas B221-2).
+        22. Cloruro (en orina).
+        23. Colesterol. 
+        24. Proteína C reactiva. 
+        25. Creatina Kinasa. 
+        26. Creatina Kinasa MB, actividad. 
+        27. Creatinina. 
+        28. Creatinina (en orina).
+        29. g-Glutamiltransferosa. 
+        30. Glucosa. 
+        31. Glucosa (en orina).    
+        32. Hemoglobina glicada. 
+        33. Colesterol HDL. 
+        34. Inmunoglobina A. 
+        35. Inmunoglobina G. 
+        36. Inmunoglobina M. 
+        37. Hierro. 
+        38. Lactato. 
+        39. Lactato-deshidrogenasa. 
+        40. Magnesio.   """))
+    return analito_ext
+#funcion para ingresar los datos interior y/o externos
+def ingresar_datos_analito(analito, tipo_control):
+    if tipo_control == "interno":
+        # Datos internos
+        print(f"Ingrese los datos internos de {analito}.")
+        datos_niveles = []
+        for nivel in range(1, 4):
+            print(f"Ingrese los datos para el nivel {nivel}.")
+            nombre = "Lyphochek Assayed Chemistry"
+            media_mensual = float(input("Media mensual: "))
+            diana = float(input("Diana: "))
+            sd = float(input("SD: "))
+            cva = float(input("CVa%: "))
+            n = float(input("n: "))
+            datos_niveles.append([nombre, media_mensual, diana, sd, cva, n])
+        datos_control_interno.append([analito, datos_niveles])  # Añade a una lista general (nos ayuda a ahorar en hacer más funciones)
+        return datos_control_interno
+    elif tipo_control == "externo":
+        # Datos externos
+        print(f"Ingrese los datos externos de {analito}.")
+        datos_corridas = []
+        for corrida in range(1, 3):
+            print(f"Ingrese los datos para la corrida {corrida}.")
+            programa = "Clinical chemistry"
+            ciclo = float(input("Ciclo: "))
+            muestra = float(input("Muestra: "))
+            media_grup = float(input("Media grupo: "))
+            dato_lab = float(input("Dato del laboratorio: "))
+            sdg = float(input("SD grupo: "))
+            cvg = float(input("CV% Grupo: "))
+            rm = float(input("RM%DEV: "))
+            datos_corridas.append([programa, ciclo, muestra, media_grup, dato_lab, sdg, cvg, rm])
+        datos_control_externo.append([analito, datos_corridas])  # Añade a una lista general (nos ayuda a ahorar en hacer más funciones)
+        return datos_control_externo
     
-#SUBMENU DE INFORMES
-def menu_informes():
-    print("aun no esta hecho pero no quiero que quede por error")
-
-#ALARMAS CONTROLADOR 
-def alarma_controles():
-    valor_control=int(input("Ingrese el valor que indica la maquina sobre los controles: "))
-
-
-#ALARMA CALIBRADOR
-
-#MAIN
-print("Bienvenido al programa de control de requisitos del laboratorio clinico")
-while(True): #Hace que se repita el menú hasta que demos la opción de salir del programa.
-    n=int(input("""Ingrese la opción que desea realizar el día de hoy: 
-        ➜ 1. Realizar ensayos de control de requisitos.
-        ➜ 2. Realizar informes. 
-        ➜ 3. Ninguna de las anteriores.\nIngrese la opción aquí: """))
-    print("………………………………………………………………………………………………………………………………………………………………………………………………………………♥")
-    if (n==1):
-        menu_ensayos() #llama al subprograma que tiene las opciones de ensayos.
-    elif (n==2):
-         menu_informes()
-    elif(n==3):
-        print("Muchas gracias por usar nuestros servicios, vuelva prontro")
-        break 
-    else:
-        print("Ha seleccionado una opción que no existe en el menú. Intente de nuevo.")
+#MAIN 
+while(True):
+    print("Bienvenido al programa de indicadores de desempeño analítico del laboratorio clinico de la sección Química Clínica")
+    menu=int(input("""Ingrese la opción de lo que desea realizar: 
+        1. Ingreso de datos control de calidad interno. 
+        2. Ingreso de datos control de calidad externo. 
+        3. Realización de informes de indicadores de desempeño analítico. 
+        4. Cambio en las especificaciones.
+        5. Salir del programa. \n Ingrese la opción aquí: """))
+    if menu==1:                                              #EN PROCESO
+        analito_int=control_interno() 
+        for i in range (0,40+1):
+            ingresar_datos_analito(i,"interno")
+    elif menu==2:                                               #EN PROCESO
+        analito_ext==control_externo() 
+        for i in range (0,40+1):
+            ingresar_datos_analito(i,"interno")
+    elif menu==3:                                          #NO HEMOS EMPEZADO
+        print("aun no llegamos alla")
+    elif menu==4:                                          #NO HEMOS EMPEZADO
+        print("todavia nada")
+    elif menu==5:                                         #NO HEMOS EMPEZADO
+        print("Gracias por usar nuestros servicios")
+        break
+    else:                                                   
+        print("Ha seleccionado una opción incorrecta, intente de nuevo.")
